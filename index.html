@@ -1,0 +1,269 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="./node_modules/reveal.js/dist/theme/blood.css">
+    <!-- black, white, league, beige, sky, night, serif, simple, solarized, blood, moon -->
+    <link rel="stylesheet" href="./node_modules/reveal.js/plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Les métiers de du web</h2>
+        </section>
+        <section>
+          <section>
+            <h3>Les différents métier</h3>
+          </section>
+          <!-- mettre le quizz en premier -->
+          <section>
+            <h4>Creatif</h4>
+            <p class="fragment">Graphiste</p>
+            <p class="fragment">UX designer</p>
+            <p class="fragment">Directeur artistique</p>
+          </section>
+          <section>
+            <h4>Technique</h4>
+            <p class="fragment">Développeur•se</p>
+            <p class="fragment">Administrateur système</p>
+            <p class="fragment">Data Scientist</p>
+          </section>
+          <section>
+            <h4>Communication</h4>
+            <p class="fragment">SEO</p>
+            <p class="fragment">Community manager</p>
+            <p class="fragment">Marketing</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Développeur•se</h3>
+            <p class="fragment">Programmeur•se</p>
+            <p class="fragment">Codeur•se</p>
+            <!-- A votre avis que ce que fait un développeur ? -->
+          </section>
+          <section>
+            <h4>écrire du code</h4>
+            <img src="./img/ecrire-du-code.gif" alt="écrire du code" />
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+              $a = 20;
+              $b = 30;
+              $c = sqrt(pow($a, 2), pow($b, 2));
+            </code></pre>
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+              $sql = 'SELECT * FROM movies WHERE year = 2021';
+              $statement = $connection->prepare($sql)
+              $statement->execute();
+
+              foreach ($statement->fetchAll() as $movie) {
+                if ($movie->getRate() > 3) {
+                  echo "it's a good movie";
+                } else {
+                  echo "it's a bad movie";
+                }
+              }
+            </code></pre>
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+              class MoviesController extends AbstractController
+              {
+                #[Route('/movies/{year}', name="movies")]
+                public function movies(int $year)
+                {
+                  $repository = $this->getDoctrine()->getRepository(Movie::class);
+                  $movies = $repository->findBy(['year' => $year])
+
+                  return $this->render('movie.html.twig', [
+                    'movies' => $movies,
+                  ]);
+                }
+              }
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            Quizz
+          </section>
+          <section>
+            <h4>Est ce qu'il faut être bon en anglais ?</h4>
+            <p class="fragment">Oui</p>
+          </section>
+          <section>
+            <h4>Est ce qu'il faut être bon en math ?</h4>
+            <p class="fragment">Pas forcement</p>
+          </section>
+          <section>
+            <h4>Est ce qu'il y a des filles ?</h4>
+            <p class="fragment">Oui</p>
+            <p class="fragment">33% des personnes qui travail dans le numérique</p>
+            <p class="fragment">Les Duchess : https://www.duchess-france.org/</p>
+          </section>
+          <section>
+            <img src="./img/margaret-hamilton.jpeg" alt="Margaret Hamilton" class="r-stretch" />
+            <p class=fragment>Margaret Hamilton</p>
+            <p class=fragment>a conçut le système Apollo (NASA) qui a permit de se poser sur la Lune</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Quelles études ?</h3>
+          </section>
+          <section>
+            <h4>L'université (public)</h4>
+            <p class="fragment">DUT / BTS (2 ans)</p>
+            <p class="fragment">Licence + Master (5 ans)</p>
+            <p class="fragment">Licence Pro (3 ans)</p>
+          </section>
+          <section>
+            <h4>Ecoles d'ingénieurs (5 ans)</h4>
+            <p class="fragment">EPITA-EPITECH (privé)</p>
+            <p class="fragment">INSA (public)</p>
+            <p class="fragment">Polytech (public)</p>
+            <p class="fragment">EPSI, InfoSup, ... (privé)</p>
+          </section>
+          <section>
+            <h4>Formations courtes et reconversions (5 à 9 mois)</h4>
+            <p class="fragment">Wild Code School</p>
+            <p class="fragment">Coding Academy</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Qu'est ce qu'une application web ?</h3>
+          </section>
+          <section>
+            <h4>Un site de contenu (journal, magazine, site d'info)</h4>
+            <p class="fragment">lemonde.fr</p>
+            <p class="fragment">clubic.fr</p>
+            <p class="fragment">jeuxvideo.com</p>
+          </section>
+          <section>
+            <h4>Un réseaux social</h4>
+            <p class="fragment">Facebook</p>
+            <p class="fragment">lemonde.fr</p>
+            <p class="fragment">lemonde.fr</p>
+          </section>
+          <section>
+            <h4>Un e-commerce</h4>
+            <p class="fragment">ebay</p>
+            <p class="fragment">LDLC</p>
+            <p class="fragment">amazon</p>
+            <p class="fragment">leboncoin</p>
+            <p class="fragment">vinted</p>
+          </section>
+          <section>
+            <h4>Une application métier</h4>
+            <p class="fragment">arianespace</p>
+            <p class="fragment">tribu</p>
+            <p class="fragment">espace client</p>
+          </section>
+          <section>
+            <h4>Un jeu</h4>
+            <p class="fragment">snapshat</p>
+            <p class="fragment">curvytron</p>
+            <p class="fragment"></p>
+          </section>
+          <section>
+            <h4>Une app mobile</h4>
+            <p class="fragment">Une app mobile</p>
+          </section>
+        </section>
+        <section>
+          <h3>Comment ça marche ?</h3>
+          <p class="fragment"></p>
+        </section>
+        <section>
+          <section>
+            <h3>Comment on construit une application ?</h3>
+          </section>
+          <section>
+            <h4>Un client souhaite une application</h4>
+            <p class="fragment">pour numériser son activité</p>
+            <p class="fragment">pour simplifier ou automatiser des taches</p>
+            <p class="fragment">développer une nouvelle activité</p>
+            <p class="fragment">pour refondre une ancienne application</p>
+          </section>
+          <section>
+            <h4>Le client exprime sont besoin</h4>
+            <p class="fragment">Qui va utiliser l'application</p>
+            <p class="fragment">Pourquoi faire</p>
+            <p class="fragment">Quelles sont les fonctionnalités</p>
+            <p class="fragment">On rédige un cachier des charges</p>
+          </section>
+          <section>
+            <h4>On estime le temps qu'il faut</h4>
+          </section>
+          <section>
+            <h4>On créer les maquettes</h4>
+          </section>
+          <section>
+            <h4>On développe</h4>
+          </section>
+          <section>
+            <h4>Le client recette</h4>
+            <p class="fragment">il vérifie que l'application lui convient</p>
+            <p class="fragment">il nous fait des retours</p>
+            <p class="fragment">on corrige</p>
+          </section>
+          <section>
+            <h4>On met en prod</h4>
+            <p class="fragment">l'application est déployer sur un serveur</p>
+            <p class="fragment">les utilisateurs peuvent l'utiliser</p>
+          </section>
+          <section>
+            <h4>Un bug arrive</h4>
+            <p class="fragment">on va essayer de reproduire le bug</p>
+            <p class="fragment">on va essayer le corriger</p>
+            <p class="fragment">on met le correctif en ligne</p>
+          </section>
+          <section>
+            <h4>Le client souhaite faire évoluer l'application</h4>
+            <p class="fragment">une nouvelle fonctionnalité</p>
+            <p class="fragment">supprimer une fonctionnalité</p>
+            <p class="fragment">modifier une fonctionnalité</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <img src="./img/silicon-valley.jpeg" alt="Silicon Valley" class="r-stretch" />
+            <p>Série sur une start-up US</p>
+          </section>
+          <section>
+            <img src="./img/the-it-crowd.jpeg" alt="The IT Crowd" class="r-stretch" />
+            <p>Série sur des informaticiens</p>
+          </section>
+          <section>
+            <img src="./img/les-figures-de-lombre.jpeg" alt="Les figures de l'ombre" class="r-stretch" />
+            <p>Film sur les femmes qui vérifiaient la trajectoire des fusées</p>
+          </section>
+          <section>
+            <img src="./img/mr-robot-saison.jpeg" alt="Mr Robot" class="r-stretch" />
+            <p>Série sur une hacker informatique</p>
+          </section>
+          <section>
+            <img src="./img/the-imitation-game.jpeg" alt="The Imitation Game" class="r-stretch" />
+            <p>Film sur Alan Turing</p>
+          </section>
+        </section>
+
+
+
+
+      </div>
+    </div>
+    <!-- <script src="./index.js"></script> -->
+    <script src="./node_modules/reveal.js/dist/reveal.js"></script>
+    <script src="./node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+    <script type="text/javascript">
+      Reveal.initialize({
+        plugins: [RevealHighlight],
+      })
+    </script>
+  </body>
+</html>
